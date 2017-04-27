@@ -1,6 +1,6 @@
 # Class Card
 class Card
-  attr_reader :suit, :par
+  attr_reader :suit, :par, :coast
 
   def initialize(suit, par, coast)
     @suit = suit
@@ -16,7 +16,7 @@ class Card
 
   def show
     print "[**]\t" if !see?
-    print "[#{self.name}]\t" if see? 
+    print "[#{self.name}]  " if see? 
   end
 
    def back_side!
