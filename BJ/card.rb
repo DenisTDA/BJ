@@ -15,11 +15,11 @@ class Card
   end
 
   def show
-    print "[**]\t" if !see?
-    print "[#{self.name}]  " if see? 
+    print "[**]\t" unless see?
+    print "[#{name}]  " if see?
   end
 
-   def back_side!
+  def back_side!
     @front_side = false
   end
 
@@ -27,12 +27,11 @@ class Card
     @front_side = true
   end
 
-  private  
-  def graphic_binding
-  end
+  private
+
+  def graphic_binding; end
 
   def see?
-    @front_side? true : false
+    @front_side ? true : false
   end
-
 end
